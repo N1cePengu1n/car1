@@ -1,0 +1,99 @@
+body {
+  background: linear-gradient(to right, #000 0%, #fff 100%);
+  background-size: 200% 100%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.car {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  animation: drive 10s infinite linear;
+}
+
+.car-body {
+  width: 400px;
+  height: 100px;
+  background-color: #570082;
+  border-top-right-radius: 70px;
+}
+
+.car-glass {
+  width: 110px;
+  height: 50px;
+  background-color: #00c3ff;
+  position: absolute;
+  top: -45%;
+  left: 180px;
+  border-top-right-radius: 100px;
+  border: 5px solid black;
+}
+
+.car-glasss {
+  width: 70px;
+  height: 50px;
+  background-color: #00c3ff;
+  position: absolute;
+  top: -45%;
+  left: 100px;
+  border: 5px solid black;
+}
+
+.car-wheels {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  padding: 150px;
+  top: -50%;
+}
+
+.car-wheel {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  animation: rotate 2s infinite linear;
+  background-color: aliceblue;
+  top: -50%;
+}
+
+.car-wheel:nth-child(1) {
+  left: 0;
+  top: 1px;
+}
+
+.car-wheel:nth-child(2) {
+  right: 0;
+  top: 1px;
+}
+
+@keyframes drive {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
